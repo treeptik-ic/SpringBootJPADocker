@@ -1,0 +1,8 @@
+spring:
+  jpa: 
+    hibernate:
+      ddl-auto: create
+  datasource:
+    url: jdbc:mysql://172.20.0.2:3306/demo?useSSL=false
+    username: clamaud
+    password: password
