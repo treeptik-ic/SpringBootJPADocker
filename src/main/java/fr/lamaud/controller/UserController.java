@@ -4,6 +4,7 @@ import java.util.Collection;
 
 import javax.annotation.Resource;
 
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -26,6 +27,11 @@ public class UserController {
 	@RequestMapping(method = RequestMethod.GET)
 	public Collection<User> getAllUser(){
 		return this.userService.getAllUser();
+	}
+	
+	@RequestMapping(value="/{id}",method = RequestMethod.GET)
+	public User showUser(@PathVariable("id") Integer id) {
+		return this.userService.getUserById(id);
 	}
 	
 }

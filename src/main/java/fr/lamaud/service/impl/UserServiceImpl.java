@@ -24,7 +24,11 @@ public class UserServiceImpl implements UserService{
 
 	@Override
 	public Collection<User> getAllUser() {
-		userRepository.findAll().iterator();
 		return IteratorUtils.toList(userRepository.findAll().iterator());
+	}
+
+	@Override
+	public User getUserById(Integer id) {
+		return userRepository.findOne(id);
 	}
 }

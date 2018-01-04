@@ -9,4 +9,5 @@ public interface UserService {
 	
 	User createUser(User user);
 	Collection<User> getAllUser();
+	User getUserById(Integer id);
 }
